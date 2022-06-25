@@ -1,5 +1,5 @@
-from fastapi import FastAPI # import packages
-from mode import Model
+from fastapi import FastAPI  # import packages
+from mode import User
 
 app = FastAPI()
 list_username = list()
@@ -10,7 +10,7 @@ def write_home():
          "username": list_username
     }
 @app.post("/username")
-def post_data(username : Model):
+def post_data(username : User):
     list_username.append(username)
     #a = 20
     return {
