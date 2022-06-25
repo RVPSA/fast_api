@@ -5,8 +5,7 @@ list_username = list()
 @app.get("/home") # calliing route
 def write_home():
     return {
-        "Name": "ABCD",
-        "Age": 24
+         "username": list_username
     }
 @app.post("/username")
 def post_data(username : str):
