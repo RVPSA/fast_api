@@ -14,9 +14,8 @@ dataBase : List[User] = [
 
 @app.get("/home") # calliing route
 def write_home():
-    return {
-         "username": list_username
-    }
+    return dataBase;
+
 @app.post("/username")
 def post_data(username : User):
     list_username.append(username)
