@@ -18,7 +18,7 @@ def write_home():
 
 @app.post("/username")
 def post_data(username : User):
-    list_username.append(username)
+    dataBase.append(username)
     #a = 20
     return {
         "username": username
