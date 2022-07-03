@@ -8,7 +8,8 @@ a = 10
 
 dataBase : List[User] = [
     User(
-        username = "User 1"
+        #username = "User 1
+        heartbeat = 90
     )
 ]
 
@@ -16,10 +17,18 @@ dataBase : List[User] = [
 def write_home():
     return dataBase;
 
+#@app.post("/username")
+#def post_data(username : User):
+    #dataBase.append(username)
+    #a = 20
+    #return {
+        #"username": username
+    #}
+
 @app.post("/username")
-def post_data(username : User):
-    dataBase.append(username)
+def post_data(heartbeat : User):
+    dataBase.append(heartbeat)
     #a = 20
     return {
-        "username": username
+        "heartbeat": heartbeat
     }

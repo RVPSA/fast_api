@@ -2,4 +2,5 @@ from pydantic import BaseModel
 
 
 class User(BaseModel):
-    username: str
+    #username: str
+    heartbeat: int
