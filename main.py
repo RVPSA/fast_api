@@ -26,7 +26,7 @@ def write_home():
     #}
 
 @app.post("/username")
-def post_data(heartbeat : User):
+async def post_data(heartbeat : User):
     dataBase.append(heartbeat)
     #a = 20
     return {
